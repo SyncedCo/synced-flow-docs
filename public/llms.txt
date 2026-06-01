@@ -6,30 +6,30 @@ Synced Flow gives developers and coding agents a shared styling contract: design
 
 ## Primary docs
 
-- Start: https://syncedflow.dev/start/overview/
-- Quick start: https://syncedflow.dev/start/quick-start/
-- Why Synced Flow: https://syncedflow.dev/concepts/why-synced-flow/
-- Tokens: https://syncedflow.dev/concepts/tokens/
-- System primitives: https://syncedflow.dev/concepts/system-primitives/
-- CSS API contract: https://syncedflow.dev/concepts/api-contract/
-- Build a site walkthrough: https://syncedflow.dev/build/build-a-site-walkthrough/
-- Website patterns: https://syncedflow.dev/build/website-patterns/
-- Native components: https://syncedflow.dev/build/native-components/
-- Interaction patterns: https://syncedflow.dev/build/interaction-patterns/
-- Recipes: https://syncedflow.dev/build/recipes/
-- Project examples: https://syncedflow.dev/build/project-examples/
-- Next.js integration: https://syncedflow.dev/integrations/next/
-- Astro integration: https://syncedflow.dev/integrations/astro/
-- Vite integration: https://syncedflow.dev/integrations/vite/
-- WordPress integration: https://syncedflow.dev/integrations/wordpress/
-- Plain HTML integration: https://syncedflow.dev/integrations/plain-html/
-- AI agent usage: https://syncedflow.dev/agents/ai-usage/
-- AI documentation roadmap: https://syncedflow.dev/agents/ai-documentation-roadmap/
-- CLI reference: https://syncedflow.dev/reference/cli-reference/
-- Config reference: https://syncedflow.dev/reference/config-reference/
-- Accessibility CSS: https://syncedflow.dev/reference/accessibility-css/
-- Release readiness: https://syncedflow.dev/reference/release-readiness/
-- Open source project files: https://syncedflow.dev/reference/open-source-project-files/
+- Start: https://docs.syncedflow.dev/start/overview/
+- Quick start: https://docs.syncedflow.dev/start/quick-start/
+- Why Synced Flow: https://docs.syncedflow.dev/concepts/why-synced-flow/
+- Tokens: https://docs.syncedflow.dev/concepts/tokens/
+- System primitives: https://docs.syncedflow.dev/concepts/system-primitives/
+- CSS API contract: https://docs.syncedflow.dev/concepts/api-contract/
+- Build a site walkthrough: https://docs.syncedflow.dev/build/build-a-site-walkthrough/
+- Website patterns: https://docs.syncedflow.dev/build/website-patterns/
+- Native components: https://docs.syncedflow.dev/build/native-components/
+- Interaction patterns: https://docs.syncedflow.dev/build/interaction-patterns/
+- Recipes: https://docs.syncedflow.dev/build/recipes/
+- Project examples: https://docs.syncedflow.dev/build/project-examples/
+- Next.js integration: https://docs.syncedflow.dev/integrations/next/
+- Astro integration: https://docs.syncedflow.dev/integrations/astro/
+- Vite integration: https://docs.syncedflow.dev/integrations/vite/
+- WordPress integration: https://docs.syncedflow.dev/integrations/wordpress/
+- Plain HTML integration: https://docs.syncedflow.dev/integrations/plain-html/
+- AI agent usage: https://docs.syncedflow.dev/agents/ai-usage/
+- AI documentation roadmap: https://docs.syncedflow.dev/agents/ai-documentation-roadmap/
+- CLI reference: https://docs.syncedflow.dev/reference/cli-reference/
+- Config reference: https://docs.syncedflow.dev/reference/config-reference/
+- Accessibility CSS: https://docs.syncedflow.dev/reference/accessibility-css/
+- Release readiness: https://docs.syncedflow.dev/reference/release-readiness/
+- Open source project files: https://docs.syncedflow.dev/reference/open-source-project-files/
 
 ## Agent rules
 

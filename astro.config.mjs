@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-	site: 'https://syncedflow.dev',
+	site: 'https://docs.syncedflow.dev',
 	integrations: [
 		starlight({
 			title: 'Synced Flow',
@@ -24,12 +24,12 @@ export default defineConfig({
 			],
 			head: [
 				{ tag: 'meta', attrs: { name: 'robots', content: 'index, follow' } },
-				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://syncedflow.dev/og-image.svg' } },
+				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://docs.syncedflow.dev/og-image.svg' } },
 				{ tag: 'meta', attrs: { property: 'og:image:type', content: 'image/svg+xml' } },
 				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
 				{ tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
 				{ tag: 'meta', attrs: { property: 'og:image:alt', content: 'Synced Flow documentation' } },
-				{ tag: 'meta', attrs: { name: 'twitter:image', content: 'https://syncedflow.dev/og-image.svg' } },
+				{ tag: 'meta', attrs: { name: 'twitter:image', content: 'https://docs.syncedflow.dev/og-image.svg' } },
 				{
 					tag: 'script',
 					attrs: { type: 'application/ld+json' },
@@ -38,23 +38,23 @@ export default defineConfig({
 						'@graph': [
 							{
 								'@type': 'Organization',
-								'@id': 'https://syncedflow.dev/#organization',
+								'@id': 'https://docs.syncedflow.dev/#organization',
 								name: 'SyncedCo',
 								url: 'https://syncedco.com',
 							},
 							{
 								'@type': 'WebSite',
-								'@id': 'https://syncedflow.dev/#website',
+								'@id': 'https://docs.syncedflow.dev/#website',
 								name: 'Synced Flow Documentation',
-								url: 'https://syncedflow.dev',
-								publisher: { '@id': 'https://syncedflow.dev/#organization' },
+								url: 'https://docs.syncedflow.dev',
+								publisher: { '@id': 'https://docs.syncedflow.dev/#organization' },
 							},
 							{
 								'@type': 'SoftwareApplication',
 								name: 'Synced Flow',
 								applicationCategory: 'DeveloperApplication',
 								operatingSystem: 'Any',
-								url: 'https://syncedflow.dev',
+								url: 'https://docs.syncedflow.dev',
 								codeRepository: 'https://github.com/SyncedCo/synced-flow',
 								license: 'https://github.com/SyncedCo/synced-flow/blob/main/LICENSE',
 								description: 'AI-native fluid CSS design system for brand-consistent websites, agency builds, and modern frontend projects.',
