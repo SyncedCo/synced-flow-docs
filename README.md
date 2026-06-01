@@ -14,4 +14,4 @@ npm run preview
 
 Initial content was copied from `../synced-fluid/README.md` and `../synced-fluid/docs/*.md` so we can reshape it into public docs without disturbing the package repo.
 
-Canonical public site target: `https://docs.syncedflow.dev/docs` or a dedicated docs deployment, depending on the launch plan.
+Canonical public site target: `https://docs.syncedflow.dev`.
