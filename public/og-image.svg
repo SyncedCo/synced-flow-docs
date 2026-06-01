@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Synced Flow documentation social preview</title>
+  <desc id="desc">Dark Synced Flow branded preview image with orange accent and documentation title.</desc>
+  <defs>
+    <radialGradient id="glow" cx="18%" cy="15%" r="70%">
+      <stop offset="0" stop-color="#ff3d00" stop-opacity="0.42"/>
+      <stop offset="0.38" stop-color="#ff3d00" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#050507" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15151a"/>
+      <stop offset="1" stop-color="#08080b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#050507"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="72" y="68" width="1056" height="494" rx="36" fill="url(#panel)" stroke="rgba(255,255,255,0.14)"/>
+  <circle cx="132" cy="128" r="24" fill="#ff3d00"/>
+  <path d="M128 112h12l-10 24h-12l5-13h-10l9-25h26l-4 10h-16z" fill="#fff" opacity="0.95"/>
+  <text x="178" y="137" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="800" letter-spacing="-1">Synced Flow</text>
+  <text x="120" y="286" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="74" font-weight="900" letter-spacing="-4">Documentation</text>
+  <text x="120" y="358" fill="#c9c9d1" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="500">AI-native fluid CSS for branded websites.</text>
+  <text x="120" y="444" fill="#ff7043" font-family="JetBrains Mono, ui-monospace, monospace" font-size="25" font-weight="600">tokens · primitives · recipes · agents · CLI</text>
+  <rect x="120" y="484" width="214" height="48" rx="12" fill="#ff3d00"/>
+  <text x="148" y="516" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="800">syncedflow.dev</text>
+</svg>
