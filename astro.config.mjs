@@ -52,6 +52,7 @@ export default defineConfig({
 							{
 								'@type': 'SoftwareApplication',
 								name: 'Synced Flow',
+								softwareVersion: '0.3.1',
 								applicationCategory: 'DeveloperApplication',
 								operatingSystem: 'Any',
 								url: 'https://docs.syncedflow.dev',

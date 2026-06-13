@@ -1,7 +1,7 @@
 {
   "name": "synced-flow-docs",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.3.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
