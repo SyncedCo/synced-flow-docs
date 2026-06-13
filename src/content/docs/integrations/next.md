@@ -8,7 +8,7 @@ Use the Next.js preset when Synced Flow is powering an App Router or Pages Route
 ## Setup
 
 ```bash
-pnpm add @synced/flow
+pnpm add @syncedco/flow
 pnpm exec synced-flow init --preset next --agents
 pnpm flow:build
 pnpm flow:check

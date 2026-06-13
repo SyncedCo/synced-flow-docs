@@ -51,13 +51,13 @@ Names such as Synced, SyncedCo, and Synced Flow may be used to truthfully refer 
 
 ## Package Metadata
 
-The package is published as `@synced/flow` and exposes:
+The package is published as `@syncedco/flow` and exposes:
 
-- package entry: `@synced/flow`
-- config helper: `@synced/flow/config`
-- theme presets: `@synced/flow/presets`
-- token module: `@synced/flow/tokens`
-- CSS layers: `tokens.css`, `reset.css`, `base.css`, `app.css`, `layout.css`, `components.css`, `utilities.css`, and `styles.css`
+- package entry: `@syncedco/flow`
+- config helper: `@syncedco/flow/config`
+- theme presets: `@syncedco/flow/presets`
+- token module: `@syncedco/flow/tokens`
+- CSS layers: `tokens.css`, `reset.css`, `base.css`, `defaults.css`, `layout.css`, `components.css`, `utilities.css`, and `styles.css`
 - CLI binary: `synced-flow`
 
 ## Maintainer Checks

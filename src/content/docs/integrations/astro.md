@@ -8,7 +8,7 @@ Use the Astro preset for content-heavy sites, marketing pages, docs-adjacent mic
 ## Setup
 
 ```bash
-pnpm add @synced/flow
+pnpm add @syncedco/flow
 pnpm exec synced-flow init --preset astro --agents
 pnpm flow:build
 pnpm flow:check

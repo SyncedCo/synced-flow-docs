@@ -8,7 +8,7 @@ export default defineConfig({
 		starlight({
 			title: 'Synced Flow',
 			description:
-				'Public documentation for Synced Flow, the AI-native fluid CSS design system.',
+				'Public documentation for Synced Flow, the AI-friendly fluid CSS design system.',
 			favicon: '/favicon.svg',
 			logo: {
 				src: './src/assets/synced-flow-mark.svg',
@@ -57,7 +57,7 @@ export default defineConfig({
 								url: 'https://docs.syncedflow.dev',
 								codeRepository: 'https://github.com/SyncedCo/synced-flow',
 								license: 'https://github.com/SyncedCo/synced-flow/blob/main/LICENSE',
-								description: 'AI-native fluid CSS design system for brand-consistent websites, agency builds, and modern frontend projects.',
+								description: 'AI-friendly fluid CSS design system for brand-consistent websites, agency builds, and modern frontend projects.',
 							},
 						],
 					}),
@@ -120,6 +120,7 @@ export default defineConfig({
 						{ label: 'Tailwind comparison', slug: 'reference/tailwind-comparison' },
 						{ label: 'Accessibility CSS', slug: 'reference/accessibility-css' },
 						{ label: 'Release readiness', slug: 'reference/release-readiness' },
+						{ label: 'Changelog', slug: 'reference/changelog' },
 						{ label: 'Open source project files', slug: 'reference/open-source-project-files' },
 					],
 				},

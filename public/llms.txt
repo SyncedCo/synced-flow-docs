@@ -1,6 +1,6 @@
 # Synced Flow documentation
 
-> Developer and AI-agent documentation for Synced Flow, an AI-native fluid CSS design system.
+> Developer and AI-agent documentation for Synced Flow, an AI-friendly fluid CSS design system.
 
 Synced Flow gives developers and coding agents a shared styling contract: design tokens, layout primitives, native components, recipe markup, generated utility CSS, and CLI verification.
 
@@ -29,6 +29,7 @@ Synced Flow gives developers and coding agents a shared styling contract: design
 - Config reference: https://docs.syncedflow.dev/reference/config-reference/
 - Accessibility CSS: https://docs.syncedflow.dev/reference/accessibility-css/
 - Release readiness: https://docs.syncedflow.dev/reference/release-readiness/
+- Changelog: https://docs.syncedflow.dev/reference/changelog/
 - Open source project files: https://docs.syncedflow.dev/reference/open-source-project-files/
 
 ## Agent rules
@@ -49,7 +50,7 @@ When using Synced Flow in a project:
 ## Useful commands
 
 ```bash
-pnpm add @synced/flow
+pnpm add @syncedco/flow
 pnpm exec synced-flow init --preset next --agents
 pnpm exec synced-flow tokens --json
 pnpm exec synced-flow catalog --json

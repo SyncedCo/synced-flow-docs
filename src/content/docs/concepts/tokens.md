@@ -30,6 +30,15 @@ Semantic tokens describe intent.
 --sf-colour-success-soft: oklch(62% 0.13 150 / 0.12);
 ```
 
+Tokens are emitted outside CSS layers so configured themes can act as the
+source of truth for brand colours, radius, layout, and component decisions.
+Use `theme.darkColours` for dark-mode values instead of maintaining a separate
+CSS file that redefines `--sf-*` variables.
+
+Theme overrides use `.sf-theme-dark`, `[data-sf-theme="dark"]`,
+`.sf-theme-light`, and `[data-sf-theme="light"]` selectors directly so they have
+enough specificity to override default `:root` values.
+
 Use semantic utilities in projects:
 
 ```html
@@ -68,6 +77,7 @@ The generated core includes enough semantic variables for common website UI:
 
 - surfaces: `--sf-colour-background`, `--sf-colour-surface`,
   `--sf-colour-surface-alt`, `--sf-colour-surface-raised`,
+  `--sf-colour-surface-raised-2`, `--sf-colour-surface-hover`,
   `--sf-colour-surface-inset`
 - text and links: `--sf-colour-foreground`, `--sf-colour-muted`,
   `--sf-colour-subtle`, `--sf-colour-link`, `--sf-colour-link-hover`
@@ -75,7 +85,18 @@ The generated core includes enough semantic variables for common website UI:
   `--sf-colour-primary-foreground`, `--sf-colour-primary-soft`
 - state feedback: `--sf-colour-success`, `--sf-colour-warning`,
   `--sf-colour-danger`, `--sf-colour-info`, plus matching soft variants
-- structure: `--sf-colour-border`, `--sf-colour-border-strong`,
+- structure: `--sf-colour-border-subtle`, `--sf-colour-border`,
+  `--sf-colour-border-strong`, `--sf-colour-backdrop`,
   `--sf-radius-control`, `--sf-radius-panel`, `--sf-shadow-*`
+- stacking: `--sf-z-sticky`, `--sf-z-header`, `--sf-z-backdrop`,
+  `--sf-z-drawer`, `--sf-z-overlay`, `--sf-z-toast`, `--sf-z-skip-link`
+- data accents: `--sf-colour-categorical-1` through
+  `--sf-colour-categorical-6`
 
 For class-level usage, see [System primitives](system-primitives.md).
+
+Custom semantic colour names from `theme.colours`, such as `secondary` or
+`tertiary`, are emitted as CSS variables and can be consumed directly with
+`var(--sf-colour-tertiary)`. Generated colour utilities are available when the
+class token is present in scanned source, for example `text-tertiary` or
+`bg-tertiary`.

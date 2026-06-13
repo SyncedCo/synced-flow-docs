@@ -2,7 +2,8 @@
 title: "CSS Optimisation Notes"
 description: "Synced Flow documentation for CSS Optimisation Notes."
 ---
-Current measurements from `pnpm build` on 2026-05-24.
+Current measurements from `pnpm build` for `@syncedco/flow@0.3.1` on
+2026-06-13.
 
 ## Developer Notes
 
@@ -35,14 +36,14 @@ Sizes are raw bytes and gzip bytes from `gzip -c`.
 
 | File | Raw | Gzip | Use |
 | --- | ---: | ---: | --- |
-| `tokens.css` | 9,505 B | 2,232 B | Design tokens only. |
-| `reset.css` | 713 B | 430 B | Reset layer only. |
-| `base.css` | 3,455 B | 1,152 B | Base element styles. |
-| `app.css` | 505 B | 296 B | Optional app/site defaults for raw links, lists, and controls. |
-| `layout.css` | 7,510 B | 1,866 B | Layout primitives such as container, stack, grid, app shell, sidebar, scroll snap, sticky, media object, and split. |
-| `components.css` | 31,195 B | 5,001 B | Component primitives such as button, icon, avatar, chart, card, surface, nav, form, alert, native overlays, disclosure, tabs, website patterns, accessibility states, and input. |
-| `utilities.css` | 7,498 B | 1,886 B | Static type, prose, content, positioning, motion, accessibility, link, list, colour, border, and shadow helpers. |
-| `styles.css` | 59,051 B | 10,457 B | Full core stylesheet with tokens, reset, base, layout, components, and utilities. |
+| `tokens.css` | 11,816 B | 2,531 B | Design tokens only. |
+| `reset.css` | 714 B | 431 B | Reset layer only. |
+| `base.css` | 3,456 B | 1,152 B | Base element styles. |
+| `defaults.css` | 506 B | 302 B | Optional site/UI defaults for raw links, lists, and controls. |
+| `layout.css` | 12,195 B | 2,820 B | Layout primitives such as container, stack, grid, app shell, sidebar, scroll snap, sticky, media object, and split. |
+| `components.css` | 49,156 B | 7,723 B | Component primitives such as button, icon, avatar, chart, card, surface, nav, form, alert, native overlays, disclosure, tabs, app primitives, website patterns, accessibility states, and input. |
+| `utilities.css` | 7,550 B | 1,902 B | Static type, prose, content, positioning, motion, accessibility, link, list, colour, border, and shadow helpers. |
+| `styles.css` | 84,057 B | 14,112 B | Full core stylesheet with tokens, reset, base, layout, components, and utilities. |
 
 Example generated project CSS with tokens plus one scanned `text-primary`
 utility measured 7,031 B raw and 1,943 B gzip.
@@ -52,25 +53,25 @@ utility measured 7,031 B raw and 1,943 B gzip.
 Use the full stylesheet when simplicity matters:
 
 ```css
-@import "@synced/flow/styles.css";
+@import "@syncedco/flow/styles.css";
 @import "./synced-flow.generated.css";
 ```
 
 Use layer imports instead when a project wants a smaller core surface:
 
 ```css
-@import "@synced/flow/tokens.css";
-@import "@synced/flow/reset.css";
-@import "@synced/flow/base.css";
-@import "@synced/flow/app.css";
-@import "@synced/flow/layout.css";
-@import "@synced/flow/components.css";
-@import "@synced/flow/utilities.css";
+@import "@syncedco/flow/tokens.css";
+@import "@syncedco/flow/reset.css";
+@import "@syncedco/flow/base.css";
+@import "@syncedco/flow/defaults.css";
+@import "@syncedco/flow/layout.css";
+@import "@syncedco/flow/components.css";
+@import "@syncedco/flow/utilities.css";
 @import "./synced-flow.generated.css";
 ```
 
 Leave out `components.css` if the project only uses tokens and layout
-primitives. Leave out `app.css` when content-style browser affordances should
+primitives. Leave out `defaults.css` when content-style browser affordances should
 stay intact. Leave out `utilities.css` unless the project uses static type,
 prose, accessibility, link, list, or full-bleed helpers.
 
@@ -93,7 +94,7 @@ Safe claims:
 
 - Modern CSS-first: Synced Flow uses cascade layers, custom properties,
   `clamp()`, logical properties, OKLCH colour, and container-aware primitives.
-- Compact by default: the full core stylesheet is currently about 10.5 KB gzip.
+- Compact by default: the full core stylesheet is currently about 14.1 KB gzip.
 - Flexible loading: developers can import only the CSS layers their project
   uses.
 - Source-scanned utilities: project utility CSS is generated from actual class

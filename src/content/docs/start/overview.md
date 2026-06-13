@@ -2,7 +2,7 @@
 title: "Synced Flow"
 description: "Synced Flow documentation for Synced Flow."
 ---
-AI-native fluid CSS design system for brand-consistent websites, agency builds,
+AI-friendly fluid CSS design system for brand-consistent websites, agency builds,
 and modern frontend projects.
 
 Synced Flow gives developers and AI coding agents a shared styling contract:
@@ -11,6 +11,11 @@ source-scanned utility CSS.
 
 Use it when you want AI-assisted build speed without breakpoint soup, one-off
 brand drift, or generated class chaos.
+
+The current package release is `@syncedco/flow@0.3.1`. This release includes
+the audit hardening for mobile drawer scrolling, vertically centered tabs,
+dark-mode action/status tokens, filter-bar alignment, status-chip dot opt-outs,
+reduced-motion safeguards, public z-index tokens, and AI-friendly positioning.
 
 - fluid by default: Utopia-style type and spacing with modern `clamp()` scales
 - token-led: primitive, semantic, and component tokens using CSS custom
@@ -70,7 +75,7 @@ SyncedCo, or Synced Flow branding in a way that implies official endorsement.
 ## Install
 
 ```bash
-pnpm add @synced/flow
+pnpm add @syncedco/flow
 pnpm exec synced-flow init --preset next --theme synced --agents
 ```
 
@@ -91,15 +96,15 @@ Most projects should choose one core import strategy.
 Use the full stylesheet when simplicity matters:
 
 ```css
-@import "@synced/flow/styles.css";
-@import "@synced/flow/app.css";
+@import "@syncedco/flow/styles.css";
+@import "@syncedco/flow/defaults.css";
 ```
 
 `styles.css` already includes the tokens, reset, base, layout, components, and
 static utilities layers. Do not also import those modular layer files alongside
 `styles.css`.
 
-`app.css` is optional. It applies common app/site defaults such as removing raw
+`defaults.css` is optional. It applies common site/UI defaults such as removing raw
 link underlines and list markers. Leave it out for content-heavy pages that
 should keep browser affordances by default.
 
@@ -107,13 +112,13 @@ For tighter CSS loading, skip `styles.css` and import only the layers the
 project uses:
 
 ```css
-@import "@synced/flow/tokens.css";
-@import "@synced/flow/reset.css";
-@import "@synced/flow/base.css";
-@import "@synced/flow/app.css";
-@import "@synced/flow/layout.css";
-@import "@synced/flow/components.css";
-@import "@synced/flow/utilities.css";
+@import "@syncedco/flow/tokens.css";
+@import "@syncedco/flow/reset.css";
+@import "@syncedco/flow/base.css";
+@import "@syncedco/flow/defaults.css";
+@import "@syncedco/flow/layout.css";
+@import "@syncedco/flow/components.css";
+@import "@syncedco/flow/utilities.css";
 ```
 
 ## CSS Size And Loading
@@ -124,7 +129,7 @@ It uses modern CSS techniques and keeps CSS loading compact in three ways:
 - the CLI scans source files and generates utility CSS only for discovered class
   tokens
 - CSS layers are exported separately, so projects can import only tokens, reset,
-  base, app defaults, layout, components, or static utilities as needed
+  base, site/UI defaults, layout, components, or static utilities as needed
 - generated animation keyframes are emitted only when scanned animation classes
   need them
 
@@ -133,17 +138,17 @@ breakpoint-heavy patterns: fluid `clamp()` scales, CSS custom properties,
 logical sizing and spacing, cascade layers, OKLCH colour tokens,
 container-aware layout primitives, and `prefers-reduced-motion` handling.
 
-Current built CSS sizes from `pnpm build` on 2026-05-28:
+Current built CSS sizes for `@syncedco/flow@0.3.1` on 2026-06-13:
 
 | File | Raw | Gzip | Purpose |
 | --- | ---: | ---: | --- |
-| `styles.css` | 59.1 KB | 10.5 KB | Full core stylesheet for simple setup. |
-| `tokens.css` | 9.5 KB | 2.2 KB | Design tokens only. |
+| `styles.css` | 84.1 KB | 14.1 KB | Full core stylesheet for simple setup. |
+| `tokens.css` | 11.8 KB | 2.5 KB | Design tokens only. |
 | `reset.css` | 0.7 KB | 0.4 KB | Reset layer only. |
 | `base.css` | 3.4 KB | 1.2 KB | Base element styles. |
-| `app.css` | 0.5 KB | 0.3 KB | Optional app/site defaults for links, lists, and native controls. |
-| `layout.css` | 7.5 KB | 1.9 KB | Fluid layout, app shell, scroll, sticky, media, and split primitives. |
-| `components.css` | 31.3 KB | 5.0 KB | Button, icon, avatar, chart, card, surface, nav, form, alert, native component, website pattern, accessibility state, and input primitives. |
+| `defaults.css` | 0.5 KB | 0.3 KB | Optional site/UI defaults for links, lists, and native controls. |
+| `layout.css` | 12.2 KB | 2.8 KB | Fluid layout, app shell, scroll, sticky, media, and split primitives. |
+| `components.css` | 49.2 KB | 7.7 KB | Button, icon, avatar, chart, card, surface, nav, form, alert, native component, app primitive, website pattern, accessibility state, and input primitives. |
 | `utilities.css` | 7.5 KB | 1.9 KB | Static `sf-*` content, positioning, motion, and helper utilities. |
 
 CSS is not automatically tree-shaken like JavaScript in every environment. The
@@ -170,8 +175,8 @@ Synced Flow keeps the browser affordances people rely on:
 Use opt-in helpers when UI needs a different treatment: `sf-link-plain` for
 navigation links, `sf-list-reset` for menu lists, `sr-only` for assistive text,
 `sf-skip-link` for skip navigation, and `sf-touch-target` for compact controls.
-For app/site projects, include `@synced/flow/app.css` or run
-`synced-flow add app` to apply those common UI defaults globally.
+For site/UI projects, include `@syncedco/flow/defaults.css` or run
+`synced-flow add defaults` to apply those common UI defaults globally.
 
 See [Base styling decisions](docs/base-styling.md).
 
@@ -216,8 +221,8 @@ building pages.
 You can also create the config by hand:
 
 ```js
-import { defineConfig } from '@synced/flow/config'
-import { themePresets } from '@synced/flow/presets'
+import { defineConfig } from '@syncedco/flow/config'
+import { themePresets } from '@syncedco/flow/presets'
 
 export default defineConfig({
   scan: ['app', 'components', 'lib'],
@@ -231,7 +236,7 @@ export default defineConfig({
 Import the generated file after the core stylesheet:
 
 ```ts
-import '@synced/flow/styles.css'
+import '@syncedco/flow/styles.css'
 import './synced-flow.generated.css'
 ```
 
@@ -289,7 +294,7 @@ synced-flow build --scan app --scan components --out app/synced-flow.generated.c
 
 Use `--include-core` only when you want the generated CSS file to contain the
 reset, base, layout, and component layers instead of importing
-`@synced/flow/styles.css` separately.
+`@syncedco/flow/styles.css` separately.
 
 For WordPress themes or plugins, use the WordPress preset. It scans PHP and
 template files and writes one CSS file that can be enqueued directly:

@@ -109,7 +109,7 @@ Add pages for predictable failures:
 - generated CSS is stale
 - dynamic class names were not detected
 - duplicate imports created bloated CSS
-- links/lists changed after adding `app.css`
+- links/lists changed after adding `defaults.css`
 - focus styles are missing or overridden
 - responsive variants were enabled unnecessarily
 

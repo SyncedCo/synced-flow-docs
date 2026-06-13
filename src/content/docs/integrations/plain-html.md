@@ -8,7 +8,7 @@ Use the plain preset for static HTML, prototyping, simple marketing pages, or pr
 ## Setup
 
 ```bash
-pnpm add @synced/flow
+pnpm add @syncedco/flow
 pnpm exec synced-flow init --preset plain --agents
 pnpm flow:build
 pnpm flow:check

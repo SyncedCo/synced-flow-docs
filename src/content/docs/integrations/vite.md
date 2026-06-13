@@ -8,7 +8,7 @@ Use the Vite preset for React/Vite apps, lightweight SPAs, and static frontend p
 ## Setup
 
 ```bash
-pnpm add @synced/flow
+pnpm add @syncedco/flow
 pnpm exec synced-flow init --preset vite --agents
 pnpm flow:build
 pnpm flow:check
