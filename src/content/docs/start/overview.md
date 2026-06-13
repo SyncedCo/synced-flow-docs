@@ -51,7 +51,8 @@ reduced-motion safeguards, public z-index tokens, and AI-friendly positioning.
 ## Links
 
 - GitHub: [github.com/SyncedCo/synced-flow](https://github.com/SyncedCo/synced-flow)
-- Website: [syncedco.com](https://syncedco.com)
+- Main website: [syncedflow.dev](https://syncedflow.dev)
+- Creator: [Synced](https://syncedco.com), the team behind Synced Flow
 - Issues: [github.com/SyncedCo/synced-flow/issues](https://github.com/SyncedCo/synced-flow/issues)
 - Support: [SUPPORT.md](SUPPORT.md)
 

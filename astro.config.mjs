@@ -14,8 +14,16 @@ export default defineConfig({
 				src: './src/assets/synced-flow-mark.svg',
 				alt: 'Synced Flow',
 			},
+			components: {
+				SocialIcons: './src/components/SocialIcons.astro',
+			},
 			customCss: ['./src/styles/synced-flow-brand.css'],
 			social: [
+				{
+					icon: 'external',
+					label: 'Main website',
+					href: 'https://syncedflow.dev',
+				},
 				{
 					icon: 'github',
 					label: 'GitHub',
@@ -56,6 +64,7 @@ export default defineConfig({
 								applicationCategory: 'DeveloperApplication',
 								operatingSystem: 'Any',
 								url: 'https://docs.syncedflow.dev',
+								creator: { '@id': 'https://docs.syncedflow.dev/#organization' },
 								codeRepository: 'https://github.com/SyncedCo/synced-flow',
 								license: 'https://github.com/SyncedCo/synced-flow/blob/main/LICENSE',
 								description: 'AI-friendly fluid CSS design system for brand-consistent websites, agency builds, and modern frontend projects.',
